@@ -13,15 +13,16 @@
         <input type="number" name="num_of_semesters" id="num_of_sem" placeholder="Number of semesters">
         <div id="each_semester_detail">
             <h2>Semester 1</h2>
-            <div id="each_subject_detail">
-                <div>
-                    <input type="number" class="subject_grade" id="subject_grade_1">
-                    <input type="number" class="subject_credit" id="subject_credit_1">
+            <div id="each_course_detail">
+                <div id="course1_detail">
+                    <input type="number" class="course_grade" id="course_grade_1">
+                    <input type="number" class="course_credit" id="course_credit_1">
                 </div>
-                <button>Add Course</button>
+                <button id="add_course_but" onclick="addcourse()">Add Course</button>
             </div>
-            
+            <button id="Calculate_but" onclick=addsem()>Calculate</button>
         </div>
     </div>
+    <script type="module" src="index.js"></script>
 </body>
 </html>
