@@ -60,10 +60,13 @@ function calculate(){
     }
 }
 function autoshiftinput(change,nextinput){
-    if((Number(change.value)>=0)&&(Number(change.value)<=10)){
-        if(change.value != ''){
-            nextinput.focus()
+    function shift(change,nextinput){
+        if((Number(change.value)>=0)&&(Number(change.value)<=10)){
+            if(change.value != ''){
+                nextinput.focus()
+            }
         }
     }
+    setTimeout(shift,900,change,nextinput)
 }
 
