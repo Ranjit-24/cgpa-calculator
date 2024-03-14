@@ -10,7 +10,7 @@ function addsemester(){
     }
     else{
         for(var i=1;i<=numofsem;i++){
-            let txt = `<div>\n<h2>Semester ${i}</h2>\n<div id="each_course_detail_insem${i}">\n<div id="course1_detail">\n<input type="number" class="course_grade_sem${i}" id="course_grade${i}1" oninput="autoshiftinput(this,course_credit${i}1)" placeholder="Grade">\n<input type="number" class="course_credit_sem${i}" id="course_credit${i}1" oninput="autoshiftinput(this,course_grade${i}2)" placeholder="Credit">\n</div>\n</div>\n<button id="add_course_but" onclick="addcourse(${i})">Add Course</button>\n</div>`
+            let txt = `<div>\n<h2>Semester ${i}</h2>\n<div id="each_course_detail_insem${i}">\n<div id="course1_detail">\n<input type="number" class="course_grade_sem${i} input_values" id="course_grade${i}1" oninput="autoshiftinput(this,course_credit${i}1)" placeholder="Grade">\n<input type="number" class="course_credit_sem${i} input_values" id="course_credit${i}1" oninput="autoshiftinput(this,course_grade${i}2)" placeholder="Credit">\n</div>\n</div>\n<button id="add_course_but" onclick="addcourse(${i})">Add Course</button>\n</div>`
             let new_sem_div=document.createElement("div")
             new_sem_div.innerHTML=txt
             sem_div.appendChild(new_sem_div)
@@ -25,7 +25,7 @@ function addcourse(sem_num){
     count++
     let course_div = document.getElementById(`each_course_detail_insem${sem_num}`)
     let new_div = document.createElement("div")
-    new_div.innerHTML=`<input type="number" class='course_grade_sem${sem_num}' id="course_grade${sem_num}${count}" oninput="autoshiftinput(this,course_credit${sem_num}${count})" placeholder="Grade">\n<input type="number" class="course_credit_sem${sem_num}" id="course_credit${sem_num}${count}" oninput="autoshiftinput(this,course_grade${sem_num}${count+1})" placeholder="Credit">`
+    new_div.innerHTML=`<input type="number" class='course_grade_sem${sem_num} input_values' id="course_grade${sem_num}${count}" oninput="autoshiftinput(this,course_credit${sem_num}${count})" placeholder="Grade">\n<input type="number"  class="course_credit_sem${sem_num} input_values" id="course_credit${sem_num}${count}" oninput="autoshiftinput(this,course_grade${sem_num}${count+1})" placeholder="Credit">`
     course_div.appendChild(new_div)
     oldsemnum=sem_num
 }
@@ -69,4 +69,3 @@ function autoshiftinput(change,nextinput){
     }
     setTimeout(shift,900,change,nextinput)
 }
-

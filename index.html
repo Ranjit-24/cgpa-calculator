@@ -4,17 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CGPA calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <h1>Calculate CGPA</h1>
-        <p>Calculate your cumulative grade point average</p>
-        <input type="number" name="num_of_semesters" id="num_of_sem" oninput="addsemester()" placeholder="Number of semesters">
-        <div id="each_semester_detail"></div>
-        <button id="Calculate_but" onclick=calculate()>Calculate</button>
-        <p id="output">0</p>
-    </div>
+    <main>
+        <section>
+            <h1>CGPA Calculator</h1>
+            <p><span>Calculate your CGPA based on your grades and credit hours</span></p>
+            <p>Number of semesters</p>
+            <input type="number" name="num_of_semesters" id="num_of_sem" oninput="addsemester()" placeholder="Number of semesters">
+            <div id="each_semester_detail"></div>
+        </section>
+        <aside>
+            <div id="outputscreen">
+                <span>CGPA</span>
+                <h1 id="output"></h1>
+            </div>
+            <button id="Calculate_but" onclick=calculate()>Calculate</button>
+        </aside>
+    </main>
+    <div></div>
+
     <script  src="function.js"></script>
 </body>
 </html>
