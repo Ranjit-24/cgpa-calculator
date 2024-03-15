@@ -99,18 +99,22 @@ main{
 
 }
 @media (max-width:800px){
+    #add_course_but{
+        width: 370px;
+    }
     body{
-        min-width: 450px;
+        min-width: 100vh;
     }
     main{
-        flex-direction: column;
-        align-items: center;
+        flex-direction:column;
+        justify-content:center;
         padding: 0;
     }
     #outputscreen{
         position: static;
-        width: 345px;
-        margin: 0;
+        width: 325px;
+        margin:0 ;
+        margin-top:30px;
     }
     #Calculate_but{
         position: static;
@@ -120,11 +124,19 @@ main{
     #num_of_sem{
         width: 345px;
     }
-    aside{
-        min-width:400px ;
-        margin:50px 30px 0px 1px;
+    section{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
     }
+    aside{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        min-width:100vh;
+        margin:0;
+  }
     .input_values{
-        width: 150px;
+        width: 148px;
     }
 }
