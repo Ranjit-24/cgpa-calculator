@@ -135,6 +135,9 @@ main{
     }
 }
 @media (max-width:399px){
+    body{
+        margin: 0;
+    }
     main{
         width: 100vw;
     }
