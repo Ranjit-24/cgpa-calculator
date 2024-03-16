@@ -25,7 +25,7 @@ input{
     border-radius: 15px;
 }
 .input_values{
-    margin:12px 6px 12px 0;
+    margin:12px 3px 12px 3px;
     width: 210px;
 }
 #Calculate_but{
@@ -98,8 +98,11 @@ main{
     }
     main{
         flex-direction:column;
-        justify-content:center;
+        align-items:center;
         padding: 0;
+    }
+    #desc{
+        width: 375px;
     }
     #outputscreen{
         position: static;
@@ -126,7 +129,7 @@ main{
         align-items:center;
         min-width:100vw;
         margin:0;
-  }
+    }
     .input_values{
         width: 148px;
     }
@@ -136,13 +139,13 @@ main{
         width: 100vw;
     }
     .input_values {
-        width: 100px;
+        width: 122px;
     }
     #desc,#add_course_but{
-        width: 270px;
+        width: 320px;
     }
     #num_of_sem{
-        width: 250px;
+        width: 290px;
     }
     #outputscreen,#Calculate_but{
         margin-top: 30px;
