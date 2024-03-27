@@ -1,9 +1,15 @@
 var p=document.getElementById("output")
 function num_of_sem(){
-    return document.getElementById("num_of_sem").value
+    return document.getElementById("num_of_sem").value;
 }
 function addsemester(){
     numofsem=num_of_sem()
+    if(numofsem==1){
+        document.getElementById("outputscreen_span").innerText="GPA";
+    }
+    else{
+        document.getElementById("outputscreen_span").innerText="CGPA";
+    }
     var sem_div=document.getElementById("each_semester_detail")
     if(numofsem == ""){
         sem_div.innerHTML=""
