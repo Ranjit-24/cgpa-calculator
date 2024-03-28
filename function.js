@@ -67,11 +67,14 @@ function calculate(){
 }
 function autoshiftinput(change,nextinput){
     function shift(change,nextinput){
-        if((Number(change.value)>=0)&&(Number(change.value)<=10)){
-            if(change.value != ''){
+        if((Number(change.value)>=0)&&(Number(change.value)<=10)&&(change.value != '')){
                 nextinput.focus()
-            }
         }
     }
-    setTimeout(shift,900,change,nextinput)
+    if(change.value==1){
+        setTimeout(shift,900,change,nextinput)
+    }
+    else{
+        shift(change,nextinput)
+    }
 }
